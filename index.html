@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Unique Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+</head>
+<body>
+    <!-- Start Quiz Button -->
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Knowledge Challenge</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Question text inserted by JS -->
+            </div>
+            <div class="option_list">
+                <!-- Options inserted by JS -->
+            </div>
+        </section>
+        <footer>
+            <div class="total_que">
+                <!-- Question count inserted by JS -->
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Score text inserted by JS -->
+        </div>
+        
+        <!-- IMPROVEMENT: High Score Display -->
+        <div class="high_score_text" style="font-weight: 700; color: #7d2ae8; margin-bottom: 20px;"></div>
+
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    <!-- Script files -->
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

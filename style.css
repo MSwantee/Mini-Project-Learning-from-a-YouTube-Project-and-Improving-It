@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com');
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+
+.start_btn, .quiz_box, .result_box {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Button & Box Styles */
+.start_btn button { font-size: 25px; font-weight: 500; color: #7d2ae8; padding: 15px 35px; border: none; border-radius: 8px; background: #fff; cursor: pointer; }
+.quiz_box, .result_box { width: 550px; background: #fff; border-radius: 12px; display: none; padding: 20px; }
+
+/* Display logic */
+.quiz_box.activeQuiz, .result_box.activeResult { display: block; }
+
+header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f1f1f1; padding-bottom: 15px; }
+header .title { font-size: 20px; font-weight: 600; }
+header .timer { background: #f3e5f5; border: 1px solid #e1bee7; padding: 10px; border-radius: 5px; display: flex; width: 145px; justify-content: space-between; }
+
+.que_text { font-size: 25px; font-weight: 600; padding: 20px 0; }
+.option_list { display: block; }
+.option_list .option {
+    background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px;
+    padding: 12px 15px; font-size: 17px; margin-bottom: 15px; cursor: pointer;
+    transition: all 0.2s ease;
+}
+.option_list .option:hover { color: #7d2ae8; background: #f1e9ff; border: 1px solid #7d2ae8; }
+
+.next_btn { float: right; padding: 10px 25px; background: #7d2ae8; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+.result_box { flex-direction: column; align-items: center; text-align: center; }
+.result_box .icon { font-size: 80px; color: #7d2ae8; margin-bottom: 10px; }
+.result_box .buttons button { margin: 0 10px; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+.buttons button.restart { background: #7d2ae8; color: #fff; border: none; }
